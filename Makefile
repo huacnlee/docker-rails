@@ -5,5 +5,7 @@ start:
 	docker-compose up -d
 stop:
 	docker-compose down
-resstart:
+restart:
 	docker-compose restart
+install:
+	docker-compose run app bundle exec rails assets:precompile
