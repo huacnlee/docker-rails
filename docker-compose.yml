@@ -4,6 +4,7 @@ services:
     image: my/rails:latest
     environment:
       - RAILS_ENV=production
+      - RAILS_SERVE_STATIC_FILES=true
       - DATABSE_URL=mysql://root@localhost:3306/test
       - SECURE_KEY_BASE=645d22504ac8e152ef855038c0b59e9e94662db0b5a6b6532668ee80699755898e8433bbb2d2826f05e46e51d1d9097925282087d1e7ba4ff512a393741c96e5
     ports:
