@@ -9,7 +9,5 @@ RUN apk --update add ca-certificates nodejs tzdata nginx libcurl && \
 
 COPY . /home/app/rails-app
 RUN bundle install --without development test --path vendor/bundle
-RUN RAILS_ENV=production bundle exec rails assets:precompile
 
-ENV RAILS_ENV=production
 CMD  ["bundle", "exec", "rails", "s"]
